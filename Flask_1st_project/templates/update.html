@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <!-- <form action="/list" method="post">
+            <input type="text" name="xname" placeholder="Enter user name" id="uname"><br><br>
+            <input type="password" name="xpsw" placeholder="Enter user passowrd" id="usw"><br><br>
+            <input type="text" name="xcity" placeholder="Enter user city" id="ucity"><br><br>
+            <input type="submit" id="btn">
+    </form> -->
+    <form action="/list2" method="post">
+
+        {%for i in update%}
+        <input type="hidden" name="xid" id="" value={{i[0]}}><br><br>
+        <input type="text" name="xnam" id="" value={{i[1]}} placeholder="Enter user name"><br><br>
+        <input type="text" name="psw" id="" value={{i[2]}} placeholder="Enter user passowrd"><br><br>
+        <input type="text" name="xct" id="" value={{i[3]}} placeholder="Enter user city"><br><br>
+        
+        {%endfor%}
+        <input type="submit">
+    </form>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}
+{% block content%}
+<title>
+    show page
+</title>
+<style>
+    body{
+        background-color: rgb(250, 223, 189);
+    }
+</style>
+<table border="2" style="height: 20px; width: 70%; margin: 3% auto; text-align: center;">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>MOBILE NO</th>
+        <th>PASSWORD</th>
+        <th>EMAIL</th>
+        <th>DATE</th>
+        <th>IMAGE</th>
+    </tr>
+
+    {%for i in data%}
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>
+        <td>{{i[6]}}</td>
+    </tr>
+    {%endfor%}
+    <tr>
+        <th colspan="6">
+                TOTAL USER ==>  
+                {{rc}}
+            </th>
+    </tr>
+</table>
+{%endblock%}

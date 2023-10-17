@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show data</title>
+</head>
+<body style="background-color:aqua  ;  ">
+    <h1 align="center">Database table data</h1>
+    <a href="/add" style="color: red; margin-left: 15%;"><button type="button"> Add Data</button></a>
+    <table border="2" style="margin:1% auto; width: 70%; height: 20px; font-size: 20px; text-align: center;">
+        <tr style="background-color: yellow;">
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>User City</th>
+            <th>User Sale</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        {% for i in data%}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td><a href="/edit/{{i[0]}}">Edit</a></td>
+                <td><a href="/delete/{{i[0]}}">Delete</a></td>
+            </tr>
+            {%endfor%}
+            <!-- <tr><td></td></tr> -->
+    </table>
+
+
+</body>
+</html>

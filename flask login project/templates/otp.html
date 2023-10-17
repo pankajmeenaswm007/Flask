@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<title>Email verify</title>
+<style>
+    body{
+        background-image: url(/static/Image/bg.webp);
+        animation: pankaj 2s linear infinite;
+    }
+    @keyframes pankaj {
+            100%{
+                filter: hue-rotate(360deg);
+            }
+            
+        }
+    .box{
+        height: 300px;
+        width: 30%;
+        margin: 8% auto;
+        border-radius: 20px;
+        background-color: red;
+    }
+</style>
+<h1 align="center" style="color: white;">{{data[3]}}</h1>
+<h1 align="center" style="color: white;">{{msg}}</h1>
+<div class="box"><br>
+    <h1 align="center">create user password</h1><br><br>
+    <form action="/varify" method="post">
+        
+        <input type="text" value="{{data[3]}}" name="email" id="" ><br><br>
+        <input type="text" name="xotp"  placeholder="Enter one time password" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="submit" name="" id="" value="Get otp" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px; border-radius: 20px;"><br>
+        
+</div>
+
+{% endblock %}

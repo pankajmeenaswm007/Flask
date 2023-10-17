@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Page </title>
+</head>
+<body>
+    
+    <h1 align="center">Update table data</h1>
+    <form action="/myedit" method="post">
+        {%for i in data%}
+        <input type="hidden" name="uid" placeholder="Enter user name" value="{{i[0]}}"><br>
+        <input type="text" name="uname" placeholder="Enter user name" value="{{i[1]}}"><br><br>
+        <input type="text" name="ucity" placeholder="Enter User city" value="{{i[2]}}"><br><br>
+        <input type="number" name="usale" placeholder="Enter user sale" value="{{i[3]}}"><br><br>
+        <input type="submit">
+        {%endfor%}
+    </form>
+</body>
+</html>

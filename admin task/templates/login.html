@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body{
+            background: beige;
+        }
+        .box{
+            height: 250px;
+            width: 40%;
+            margin:10% auto;
+            border: 2px solid red ;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <form action="/ulogin" method="post">
+        <h2>{{msg}}</h2>
+        <h1 align="center">Login</h1>
+        <input type="text" name="user" placeholder="enter admin user name" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px;"><br><br>
+        <input type="password" name="psw" id="" placeholder="enter admin user password" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px;"><br><br>
+        <input type="submit" name="" id="" value="submit" style="height: 30px; width: 81%;margin-left: 50px; font-size: 20px;">
+    </form>
+</div>
+</body>
+</html>

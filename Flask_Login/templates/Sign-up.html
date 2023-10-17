@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/Sign-up.css">
+    <title>Sign-Up Page</title>
+</head>
+<body>
+    <div class="box">
+        <span class="borderLine"></span>
+        <form action="/sign" method="post" enctype="multipart/form-data">
+            <h2>Sign-up</h2>
+            <h3 align="center" style="color: wheat;">{{msg}}</h3>
+            <div class="inputBox">
+                <input type="text" required="required" name="xname">
+                <span>Enter User Name</span>
+                <i></i>
+            </div>
+            
+            <div class="inputBox">
+                <input type="tel" required="required" name="xtel">
+                <span>Enter User Mobile No.</span>
+                <i></i>
+            </div>
+            
+            <div class="inputBox">
+                <input type="text" required="required" name="xpsw">
+                <span>Create password</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="file" required="required" name="xfile">
+                <span>Choice your image</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="/forget" >Forgot Password</a>
+                <a href="/Loginp">Back to Login</a>
+            </div>
+            <input type="submit" value="Confrim">
+        </form>
+    </div>
+</body>
+</html>

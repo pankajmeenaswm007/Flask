@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER</title>
+    <style>
+        body{
+            background-image: url(/static/signbg.jpg);
+        }
+        .box{
+            height: 100px;
+            width: 20%;
+            /* background-color: red; */
+            margin: 10% auto;
+            position: relative;
+        }
+        .one{
+            height: 100px;
+            width: 100%;
+            /* background-color: blue; */
+            position: absolute;
+        }
+        .two{
+            height: 100px;
+            width: 60%;
+            /* background-color: yellow; */
+            position: relative;
+            color: white;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one"><img src="/static/image/{{data[2]}}" alt="" height="100px" width="30%" style="border-radius: 100%;"></div>
+        <div class="two">
+            <h2 align="center">{{data[1]}}</h2>
+            <h2 align="center">{{data[0]}}</h2>
+        </div>
+        <a href="/Loginp"><button type="button" style="padding: 10px; font-size: 20px; margin-top: 120px; cursor: pointer;">Logout</button></a>
+    </div>
+</body>
+</html>

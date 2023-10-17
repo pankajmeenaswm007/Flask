@@ -1,0 +1,54 @@
+{% extends 'layout.html'%}
+{% block content%}
+<title>Register</title>
+<style>
+    body{
+        background-image: url(/static/Image/bg.webp);
+        animation: pankaj 2s linear infinite;
+    }
+    @keyframes pankaj {
+            100%{
+                filter: hue-rotate(360deg);
+            }
+            
+        }
+    .box{
+        height: 500px;
+        width: 30%;
+        margin: 8% auto;
+        border-radius: 20px;
+        background-color: red;
+    }
+</style>
+<h1 align="center" style="color: white;">{{my}}</h1>
+<div class="box"><br>
+    <h1 align="center">Sign-Up</h1><br>
+    <form action="/add" method="post" enctype="multipart/form-data">
+
+        <input type="text" name="xname" id="" placeholder="  Enter user name" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="tel" value="  +91 "  name="xtel" id="" placeholder="   Enter user mobile No" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="password" name="xpsw" id="xpsw" placeholder="  Create user password" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <br><span style="height: 30px; width: 80%; margin: 10px 0px 0px 30px; font-size: 20px; color: white;">Show Password</span>&nbsp;<input type="checkbox" name="" id="check" >
+        <input type="email" name="xemail"  placeholder="     Email" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="date" name="xdate"  placeholder="     Date of birth" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="file" name="xfile"  placeholder="     Chose your image" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;">
+        <input type="submit" name="" id="btn" value="Submit" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px; border-radius: 20px;"><br>
+    </form>
+        <a href="/login" style="font-size: 20px; color: white; padding: 10px; margin: 10px 0px 0px 20px;">Login</a>
+        <a href="/forget" style="font-size: 20px; color: white; padding: 10px; margin: 10px 0px 0px 5px;">Forget password</a>
+</div>
+<script>
+    check.onclick=()=>{
+        if(check.checked==true)
+        {
+            xpsw.type="text";
+        }
+        else{
+            xpsw.type="password";
+
+        }
+    }
+</script>
+
+
+{%endblock%}

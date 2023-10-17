@@ -1,0 +1,43 @@
+{% extends 'layout.html'%}
+{% block content%}
+    <title>user data</title>
+    <style>
+        body{
+            background-image: url(/static/Image/bg.webp);
+        }
+       
+
+        .box{
+            height: 100px;
+            width: 30%;
+            /* border: 2px solid red; */
+            margin: 10% auto;
+            position: relative;
+        }
+        .one{
+            height: 100%;
+            width: 40%;
+            /* background-color: yellow; */
+            position: absolute;
+        }
+        .two{
+            height: 100%;
+            width: 100%;
+            /* background-color: blue; */
+            /* position: absolute; */
+            color: white;
+         
+        }
+    </style>
+    
+    <div class="box">
+        <div class="one"><img src="static/Image/{{my[6]}}" alt="image not found" height="100px" style="border-radius: 70%;" width="85%"></div>
+        <div class="two">
+            <h2 align="center" style="margin-left: 100px; padding-top: 20px;">{{my[1]}}</h2>
+            <h2 align="center" style="margin-left: 100px; padding-top: 20px;">{{my[2]}}</h2>
+            
+        </div>
+        <a href="/login"> <input type="submit" name="" id="" value="Logout" style="padding: 10px; font-size: 20px; color: red; margin-top: 10px;"></a>
+       
+    </div>
+{%endblock%}

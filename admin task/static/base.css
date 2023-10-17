@@ -1,0 +1,25 @@
+/* base css start */
+
+*{margin: 0;padding: 0;}
+
+nav
+{
+    background-color: black;
+    height:786px;
+    width: 100%;
+}
+
+li
+{
+    list-style: none;
+    float: left;
+    padding: 10px 20px;
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}

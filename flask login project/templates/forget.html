@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<title>Forget</title>
+<style>
+    body{
+        background-image: url(/static/Image/bg.webp);
+        animation: pankaj 2s linear infinite;
+    }
+    @keyframes pankaj {
+            100%{
+                filter: hue-rotate(360deg);
+            }
+            
+        }
+    .box{
+        height: 300px;
+        width: 30%;
+        margin: 8% auto;
+        border-radius: 20px;
+        background-color: red;
+    }
+</style>
+<div class="box"><br>
+    <h1 align="center">Forget</h1><br><br>
+    <form action="/userforget" method="post">
+
+        <input type="tel" value="  +91 " name="xtel" id="" placeholder="Enter user mobile No" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px;"><br><br>
+        <input type="submit" name="" id="" value="Submit" style="height: 30px; width: 80%; margin: 10px 0px 0px 30px; border-radius: 20px;"><br><br>
+        <a href="/login" style="font-size: 20px; color: white; padding: 10px; margin: 10px 0px 0px 20px;">Login</a>
+        <a href="/register" style="font-size: 20px; color: white; padding: 10px; margin: 10px 0px 0px 5px;">Register</a>
+    </form>
+  
+</div>
+{% endblock %}

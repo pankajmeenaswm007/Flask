@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css">
+	<!-- {% block title %}  -->
+	<link rel="stylesheet" href="static/base.css"> 
+	<!-- {% endblock %}  -->
+	
+</head> 
+<body> 
+	 
+	<!-- <hr />  -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-1">
+				<nav> 
+					<li><a href="/add">add</a></li>
+					<li><a href="/show">show</a></li>
+					<li><a href="/">logout</a></li> 
+				</nav>
+			</div>
+			<div class="col-11">
+				{% block body %} 
+				<div class="box">
+					<form action="/insert" enctype="multipart/form-data" method="post">
+						<input type="file" name="xfile" placeholder="choice image" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px; margin-top: 30px;"><br><br>
+						<input type="text" name="title" id="" placeholder="enter title" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px;"><br><br>
+						<input type="text" name="price" id="" placeholder="enter price" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px;"><br><br>
+						<input type="submit" name="" id="" value="submit" style="height: 30px; width: 80%;margin-left: 50px; font-size: 20px;">
+					</form>
+				</div>
+				{% endblock %} 
+			</div>
+		</div>
+	</div>
+
+	<!-- <hr />  -->
+	<!-- <footer> 
+		<p>SiteName &copy; 2018</p> 
+	</footer>  -->
+</body> 
+</html> 

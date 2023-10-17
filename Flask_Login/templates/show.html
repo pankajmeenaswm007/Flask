@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 align="center">Show All User</h1>
+    <table border="2" style="margin: auto; height: 20px; width: 80%; text-align: center; font-size: 20px;">
+        <tr>
+            <th>ID</th>
+            <th>User Image</th>
+            <th>User Name</th>
+            <th>User Mobile</th>
+            <th>User Password</th>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td><img src="/static/image/{{i[4]}}" alt="image not found" height="60px" width="50px" style="border-radius: 100%;"></td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
